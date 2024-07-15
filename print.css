@@ -1,0 +1,96 @@
+@media print {
+
+    /* Hide bits of your website on print  */
+    .classes-of-things-you-want-excluded-when-printing,
+    .for-example-header,
+    .or-footer,
+    .hide-when-printing {
+    display: none !important;
+    }
+
+    /* Size the page to A4, could probably be done with classes */
+    @page {
+        width:  210mm !important;
+        height: 296mm !important;
+        min-width:  210mm !important;
+        min-height: 296mm !important;
+        padding: 0 !important;
+        margin: 0 !important;
+
+        /* Some hackery to make the page work nicely */
+        overflow: hidden;
+        position: relative;
+        page-break-after: always;
+    }
+
+    /* Box */
+    * {
+        box-sizing: border-box !important;
+        -moz-box-sizing: border-box;
+    }
+
+    /* Style resets */
+    /* Might not be needed but still WIP */
+    html,
+    body,
+    .zine {
+        width:  210mm !important;
+        height: 296mm !important;
+        min-width:  210mm !important;
+        min-height: 296mm !important;
+        padding: 0 !important;
+        margin: 0 !important;
+
+        overflow: hidden;
+        position: relative;
+        page-break-after: always;
+    }
+
+
+    /* Zine styles */
+    /* Note: some #just-becuz values here, again, WIP. Could probable use Grid for this and some newer CSS… did I mention this is a WIP? */
+    .zine {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+    }
+    .zine__page {
+        padding: 10mm;
+        position: absolute;
+        width: 74mm;
+        height: 105mm;
+        display: block;
+
+        /* Testing borders */
+        border: 1px dashed black;
+    }
+    .rotate-anti {
+        transform: rotate(-90deg);
+        left: 120mm;
+    }
+    .rotate-clock {
+        transform: rotate(90deg);
+        left: 15mm;
+    }
+    #page00,
+    #page01 {
+        top: -16mm;
+    }
+    #page02,
+    #page07 {
+        top: 58mm;
+    }
+    #page03,
+    #page06 {
+        top: 132mm;
+    }
+    #page04,
+    #page05 {
+        top: 206mm;
+    }
+    /* Page 7 / back cover */
+    #page07 {
+
+    }
+
+}
